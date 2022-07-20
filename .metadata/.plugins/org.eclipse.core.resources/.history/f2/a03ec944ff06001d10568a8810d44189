@@ -1,0 +1,12 @@
+package co.grandcircus.HotelSearch;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class HotelController {
+	
+	@RequestMapping("/")
+	public String showIndex() {
+		return "home";
+	}
+}

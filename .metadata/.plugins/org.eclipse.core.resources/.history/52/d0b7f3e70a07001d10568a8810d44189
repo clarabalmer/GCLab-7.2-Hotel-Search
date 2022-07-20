@@ -1,0 +1,22 @@
+package co.grandcircus.HotelSearch;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HotelController {
+	@Autowired
+	private HotelRepository repo;
+	
+	@RequestMapping("/")
+	public String showIndex() {
+		return "redirect:/home";
+	}
+	@RequestMapping("/home")
+	public String showHome(Model model) {
+		
+		return "home";
+	}
+}
